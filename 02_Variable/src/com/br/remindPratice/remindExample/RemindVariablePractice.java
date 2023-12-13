@@ -1,4 +1,4 @@
-package com.br.pratice.remindPratice;
+package com.br.remindPratice.remindExample;
 
 import java.util.Scanner;
 

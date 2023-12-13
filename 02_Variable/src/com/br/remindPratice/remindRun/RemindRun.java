@@ -1,6 +1,6 @@
-package com.br.pratice.remindRun;
+package com.br.remindPratice.remindRun;
 
-import com.br.pratice.remindPratice.RemindVariablePractice;
+import com.br.remindPratice.remindExample.RemindVariablePractice;
 
 public class RemindRun {
 	public static void main(String[] args) {
