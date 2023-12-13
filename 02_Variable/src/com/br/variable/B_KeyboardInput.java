@@ -16,6 +16,9 @@ public class B_KeyboardInput {
 		
 		System.out.print("당신의 이름은 무엇입니까 : ");
 		
+		
+		
+		
 		//사용자가 입력한 값을 문자열로 읽어들이는 메소드(next(), nextLine())
 		//String name = sc.next(); //공백 읽어들이지 x
 		String name = sc.nextLine(); //공백 포함 전체구문 읽어들일 수 있음.
