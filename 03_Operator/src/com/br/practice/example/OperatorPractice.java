@@ -127,8 +127,7 @@ import java.util.Scanner;
 		 System.out.print("주민번호를 입력하세요(- 포함) : ");
 		 char gender = sc.nextLine().charAt(7);
 		 
-		 String result = (gender == '2') ? "여자" : "남자";
-		 
+		 String result = (gender == '1' || gender == '3') ? "남자" : (( gender == '2' || gender == '4') ? "여자" : "주민번호를 잘못 입력하셨습니다.");		 
 		 System.out.println(result);
 	 }
 
