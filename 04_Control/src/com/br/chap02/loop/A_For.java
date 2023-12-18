@@ -290,9 +290,36 @@ public class A_For {
 		}
 		
 	}
-
-
 	
+	public void homework() { 
+	      /*
+	      아래와 같은 형식으로 출력될 수 있도록 중첩 for문을 작성해오시오.
+	      (5행 10열짜리 *을 먼저 출력해놓고 거기서 응용한다고 생각해보시오)
+	      
+	      **********
+	      *        *
+	      *        *
+	      *        *
+	      **********
+
+	      */
+		for(int j=1; j<=5; j++) {		
+			
+			for(int i=1; i<=10; i++) {
+				
+				if(j == 2 && (i >= 2 && i < 10)) {
+					System.out.print(" ");
+				}else if(j == 3 && (i >= 2 && i < 10)) {
+					System.out.print(" ");
+				}else if(j == 4 && (i >= 2 && i < 10)) {
+					System.out.print(" ");
+				}else
+					System.out.print('*');
+			}
+			
+			System.out.println();
+		}
+	}
 }
 
 

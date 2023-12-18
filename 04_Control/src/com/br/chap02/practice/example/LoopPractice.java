@@ -158,31 +158,30 @@ public class LoopPractice {
 		 System.out.print("시작 숫자 : ");
 		 int first = sc.nextInt();
 		 
+		 sc.nextLine();
+		 
 		 System.out.print("공차 : ");
 		 int second = sc.nextInt();
+		 
+		 sc.nextLine();
+		 
+		 System.out.print("증가/감소 : ");
+		 String select = sc.nextLine();
 		
-		 if(first > second) {
-				
-			 for(int i=first; i<=10; i=first+second) {
-				 System.out.print(i);
-				 }
+		 if(first < 1 || second < 1) {
+			 System.out.print("1이상의 숫자만을 입력해주세요."); 		 
 			
-		 }else if(first < second) {
-			
-			 for(int i=first; i<=second; i=second) {
+		 }else if(select.equals("감소")) {
+			 for(int i=first; i>=-(second*8); i-=second) {
 				 System.out.print(i + " ");
 			 }
 			 
-		 }else if(first < 1 || second < 1) {
-			 System.out.print("1이상의 숫자만을 입력해주세요."); 		 
-		 
-		 }
-		
-		 
-		 
-	 }
-
-	 
+		 }else if(select.equals("증가")) {
+			 for(int i=first; i<=(second*11); i+=second) {
+				 System.out.print(i + " ");
+			 }
+		 } 
+	 } 
 }
 
 
