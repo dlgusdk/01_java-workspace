@@ -427,7 +427,75 @@ public class ConditionPractice {
 				}//다시 if문 위로 올라가서 반복하는 것 추가하기(do-while)			
 			}
 		}
-}			
+		
+		public void pratice10() {
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("중간고사 점수 : ");
+			double midterm = sc.nextDouble(); // int midterm = sc.nextInt();
+
+			
+			sc.nextLine();
+			
+			System.out.print("기말고사 점수 : ");
+			double finals = sc.nextDouble();
+			
+			sc.nextLine();
+
+			System.out.print("과제 점수 : ");
+			double homework = sc.nextDouble();
+			
+			sc.nextLine();
+			
+			System.out.print("출석횟수 : ");
+			double attendanceScore = sc.nextDouble();
+			
+			double midterm1 = (midterm / 100) * 30;    //double midterm1 = midterm * 0.3;
+
+			double finals1 = (finals / 100) * 30;
+			double homework1 = (homework / 100) * 20;
+			double attendance = (attendanceScore / 20) * 20;
+			double score = midterm1 + finals1 + homework1 + attendance;
+			
+			System.out.println("\n===== 결과 =====");
+			System.out.printf("중간고사 점수(30) : %.1f", midterm1);
+			System.out.printf("\n기말고사 점수(30) : %.1f", finals1);
+			System.out.printf("\n과제 점수(20) : %.1f", homework1);
+			System.out.printf("\n출석 점수(20) : %.1f", attendance);
+			System.out.printf("\n총점 : %.1f\n", score);
+			
+			if(score >= 80 && attendance >= 16) {		//16번, 20 * 0.8 =		
+				System.out.printf("\nPass");
+		
+			}else if (score >= 80 && attendance < 16){ //중첩 if로 변경가능
+					System.out.printf("\nFall [출석 횟수 부족] (%.0f/20)", attendance);
+			
+			}else if (score < 80 && attendance >= 16){ //중첩 if의 else로 대체가능
+				System.out.printf("\nFail [점수 미달] (%.1f)", score);
+				
+			}else if (score < 80 && attendance < 16){ //else로 대체가능
+				System.out.printf("\nFail [점수 미달] (%.1f)", score);
+				System.out.printf("\nFall [출석 횟수 부족] (%.0f/20)", attendance);
+			}
+			/*방법2.
+			if(score >= 80 && attendance >= 16) {		//16번, 20 * 0.8 =		
+				System.out.printf("\nPass");
+				
+			}else{
+		
+				if(score >= 80) {
+					System.out.printf("\nFall [출석 횟수 부족] (%.0f/20)", attendance);
+
+				}else if(attendance < 16){
+					System.out.printf("\nFail [점수 미달] (%.1f)", score);
+			}
+			
+				System.out.printf("\nFail [점수 미달] (%.1f)", score);
+				System.out.printf("\nFall [출석 횟수 부족] (%.0f/20)", attendance);
+   		 }*/
+		}     
+      }
+
 
 		
 
