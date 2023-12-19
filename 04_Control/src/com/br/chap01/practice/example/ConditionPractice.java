@@ -403,7 +403,9 @@ public class ConditionPractice {
 					}
 				
 			}else if(num == 1){
-				System.out.print("\n실행할 기능을 선택하세요.\n"
+				do{
+					System.out.print("\n실행할 기능을 선택하세요.\n"
+				
 						+ "1. 메뉴 출력\n"
 						+ "2. 짝수/홀수\n"
 						+ "3. 합격/불합격\n"
@@ -413,20 +415,23 @@ public class ConditionPractice {
 						+ "7. BMI\n"
 						+ "8. 계산기\n"
 						+ "선택 : ");
-				int num1 = sc.nextInt();
+					int num1 = sc.nextInt();
 				
-				switch(num1) {
-				case 1: result = "메뉴 출력"; break;
-				case 2: result = "짝수/홀수"; break;
-				case 3: result = "합격/불합격"; break;
-				case 4: result = "계절"; break;
-				case 5: result = "로그인"; break;
-				case 6: result = "권한 확인"; break;
-				case 7: result = "BMI"; break;
-				case 8: result = "계산기"; break;
-				}//다시 if문 위로 올라가서 반복하는 것 추가하기(do-while)			
+					switch(num1) {
+					case 1: result = "메뉴 출력"; break;
+					case 2: result = "짝수/홀수"; break;
+					case 3: result = "합격/불합격"; break;
+					case 4: result = "계절"; break;
+					case 5: result = "로그인"; break;
+					case 6: result = "권한 확인"; break;
+					case 7: result = "BMI"; break;
+					case 8: result = "계산기"; break;
+					}
+				}while(num == 1);
 			}
 		}
+				
+			
 		
 		public void pratice10() {
 			Scanner sc = new Scanner(System.in);
@@ -494,6 +499,40 @@ public class ConditionPractice {
 				System.out.printf("\nFall [출석 횟수 부족] (%.0f/20)", attendance);
    		 }*/
 		}     
+		
+		
+		public void practice11(){
+			Scanner sc = new Scanner(System.in);
+			
+			while(true) {
+				System.out.println("\n===== 메뉴  ======");
+				System.out.println("1.메뉴출력");
+				System.out.println("2.짝수/홀수");
+				System.out.println("3.합격/불합격");
+				System.out.println("4.계절");
+				System.out.println("5.로그인");
+				System.out.println("6.권한 확인");
+				System.out.println("7.BMI");
+				System.out.println("8.계산기");
+				System.out.println("0.프로그램 종료");
+				System.out.print("\n선택  : ");
+				int num = sc.nextInt();
+			
+				switch(num) {
+				case 1: practice1(); break;
+				case 2: practice2(); break;
+				case 3: practice3(); break;
+				case 4: practice4(); break;
+				case 5: practice5(); break;
+				case 6: practice6(); break;
+				case 7: practice7(); break;
+				case 8: practice8(); break;
+				case 0:  System.out.println("이용해주셔서 감사합니다. 프로그램을 종료합니다."); return;
+				default: System.out.println("메뉴 번호를 잘못 입력하셨습니다.다시 입력해주세요."); break;
+				}
+			}
+			
+		}
       }
 
 

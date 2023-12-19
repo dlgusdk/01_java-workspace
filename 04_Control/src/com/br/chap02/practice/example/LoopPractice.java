@@ -119,6 +119,8 @@ public class LoopPractice {
 		 }
 	 }	
 	 
+	 
+	 
 	 public void practice8(){
 		 Scanner sc = new Scanner(System.in);
 		 
@@ -153,36 +155,93 @@ public class LoopPractice {
 	 }
 
 	 public void practice11(){ 
+	       Scanner sc = new Scanner(System.in);
+	       
+	       System.out.print("시작 숫자 : ");
+	       int first = sc.nextInt();
+	       sc.nextLine();
+	       
+	       System.out.print("공차 : ");
+	       int second = sc.nextInt();
+	       sc.nextLine();
+	       
+	       System.out.print("증가/감소 : ");
+	       String select = sc.nextLine();
+	       
+	       int last1 = first + (9 * second);
+	       int last2 = first - (9 * second);
+
+	       if(second <= 1) {
+	          System.out.print("1이상의 숫자만을 입력해주세요.");     
+	         
+	       }else {
+	          if(select.equals("감소")) {
+
+	             for(int i=first; i>=last2; i-=second) {
+	                System.out.print(i + " ");
+	             }
+	          
+	          }else if(select.equals("증가")) {
+	             for(int i=first; i<=last1; i+=second) {
+	                System.out.print(i + " ");
+	             }
+	       } 
+	    } 
+	    
+	}
+	 public void practice12(){
 		 Scanner sc = new Scanner(System.in);
 		 
-		 System.out.print("시작 숫자 : ");
-		 int first = sc.nextInt();
+		 while(true) {
+			 System.out.print("연산자(+, -, *, /, %) : ");
+			 String op = sc.nextLine();
+
+			 	if(op.equals("exit")) {
+			 		 System.out.println("프로그램을 종료합니다."); 
+			 		 break;
+
+			 	}else {
+			 		 System.out.print("정수1 : ");
+					 int num1 = sc.nextInt();
+					 sc.nextLine();
+							
+					 System.out.print("정수2 : ");
+					 int num2 = sc.nextInt();
+					 sc.nextLine();
+
+					 if(op.equals("/")) {
+			 		
+						 if(num2 == 0) {
+							 System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.\n"); 
+							 continue;
+						 }else {
+							 System.out.printf("%d / %d = %d\n", num1, num2, num1 / num2); 
+							 break;
+						 }
+			 	
+					 }else if(op.equals("%")) {
+						 System.out.printf("%d % %d = %d\n", num1, num2, num1 % num2); 
+						 break;
+					 }else if(op.equals("-")) {
+						 System.out.printf("%d - %d = %d\n", num1, num2, num1 - num2); 
+						 break;
+					 }else if(op.equals("+")) {
+						 System.out.printf("%d + %d = %d\n", num1, num2, num1 + num2); 
+						 break;
+					 }else if(op.equals("*")) {
+						 System.out.printf("%d * %d = %d\n", num1, num2, num1 * num2); 
+						 break;
+					 }else {
+						 System.out.println("없는 연산자입니다. 다시 입력해주세요.\n"); 
+						 continue;
+					 }
+			 	}
+		 }
 		 
-		 sc.nextLine();
-		 
-		 System.out.print("공차 : ");
-		 int second = sc.nextInt();
-		 
-		 sc.nextLine();
-		 
-		 System.out.print("증가/감소 : ");
-		 String select = sc.nextLine();
-		
-		 if(first < 1 || second < 1) {
-			 System.out.print("1이상의 숫자만을 입력해주세요."); 		 
-			
-		 }else if(select.equals("감소")) {
-			 for(int i=first; i>=-(second*8); i-=second) {
-				 System.out.print(i + " ");
-			 }
-			 
-		 }else if(select.equals("증가")) {
-			 for(int i=first; i<=(second*11); i+=second) {
-				 System.out.print(i + " ");
-			 }
-		 } 
-	 } 
+	 }
 }
+
+
 
 
 	 
