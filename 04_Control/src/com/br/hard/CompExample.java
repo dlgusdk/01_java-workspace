@@ -4,7 +4,7 @@ public class CompExample {
 	
 	public void method4() {
 		/*
-		  추가문제3. 아래와 같은 형식으로 출력될 수 있도록 중첩 for문을 작성하시오.
+		  추가문제3. 아래와 같은 형식으로 출력될 수 있도록 중첩 for문을 작성하시오.(미완)
 		  
 		     1
 		    123

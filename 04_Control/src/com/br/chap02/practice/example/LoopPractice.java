@@ -165,6 +165,21 @@ public class LoopPractice {
 	       int second = sc.nextInt();
 	       sc.nextLine();
 	       
+	       /*start수부터 10개 나오도록(방법 2.)
+	        for(int i=0; i<20; i++) {
+	        	System.out.print(first + " ");
+	        	first += second;
+	        */
+	       
+	       /*방법 3
+	        * int count = 0;
+	        * for(; count<=10; first+=second) {
+	        * 	  System.out.print(first + " ");
+	        * 	  count++;
+	        *    //if(count == 11) {
+	        *    //break;
+	        */
+	       
 	       System.out.print("증가/감소 : ");
 	       String select = sc.nextLine();
 	       
@@ -191,6 +206,14 @@ public class LoopPractice {
 	}
 	 public void practice12(){
 		 Scanner sc = new Scanner(System.in);
+		 
+		 /**
+		  * 무한반복 {
+		  * 	1.연산자 입력받기
+		  * 	2.정수 두 개 입력받기
+		  * 	3.연산기호에 따라 그에 맞는 연산결과 출력
+		  * }
+		  */
 		 
 		 while(true) {
 			 System.out.print("연산자(+, -, *, /, %) : ");
@@ -219,6 +242,7 @@ public class LoopPractice {
 							 break;
 						 }
 			 	
+						 
 					 }else if(op.equals("%")) {
 						 System.out.printf("%d % %d = %d\n", num1, num2, num1 % num2); 
 						 break;
@@ -234,6 +258,7 @@ public class LoopPractice {
 					 }else {
 						 System.out.println("없는 연산자입니다. 다시 입력해주세요.\n"); 
 						 continue;
+						 //switch로 변환가능
 					 }
 			 	}
 		 }
