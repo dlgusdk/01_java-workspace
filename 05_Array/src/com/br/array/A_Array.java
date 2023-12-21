@@ -359,10 +359,21 @@ public class A_Array {
 		}
 		
 		public void homework() {
+			Scanner sc = new Scanner(System.in);
 			
-			String str = "GDKKN";
-					//각문자들을 각 문자마다 +1 진행된 문자열을 출력. GDKKN -> HELLO
+			System.out.print("문자열 입력 : ");
+			String str = sc.nextLine();
+			//각문자들을 각 문자마다 +1 진행된 문자열을 출력. GDKKN -> HELLO
 			//해당 결과값을 String result에 기록 ->출력
 			
-		}
+			int[] arr = new int[str.length()]; //char[] arr = new char[str.length()];
+			
+			String result = "";
+			for(int i=0; i<str.length(); i++) {
+				arr[i] = str.charAt(i) + 1; //문자형을 인트형으로 
+				result = result + (char)arr[i];   //result = result + arr[i];
+			}
+		
+			System.out.println(result);
+	}
 }

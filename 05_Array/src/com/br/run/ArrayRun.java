@@ -1,6 +1,7 @@
 package com.br.run;
 
 import com.br.array.A_Array;
+import com.br.array.B_ArrayCapy;
 
 public class ArrayRun {
 	public static void main(String[] args) {
@@ -13,6 +14,10 @@ public class ArrayRun {
 		//a.method6();
 		//a.method7();
 		//a.method8();
-		a.method12();
+		//a.method12();
+		//a.homework();
+		
+		B_ArrayCapy b = new B_ArrayCapy();
+		b.method6();
 	}
 }
