@@ -103,17 +103,49 @@ public class ArrayPractice {
 	    	 
 			 int num = sc.nextInt(); 
 			 			 
+			 //2.조건문을 이용해서 잘 입력했는지 판별
 	    	 if(num % 2 == 0 || num < 3) {
 	    		 System.out.print("다시 입력하세요.\n"); continue;
 			 
+	    		 //3_1.배열생성(크기는 사용자가 입력한 수만큼)
+	    		 //3_2. 배열의 각 인덱스에 값 담기
+	    		 //3_3. 배열의 각 인덱스에 담긴 값 출력
+	    		 //4.반복문 빠져나가도록
+	    		 
+	    		 /*
+	    		  * {1,2,3,2,1} 2번 인덱스까지 증가된 값 그 이후 -1
+	    		  * {1,2,3,4,3,2,1,} 3번 ~
+	    		  *  0번 ~ 중강인덱스(배열의길이/2)까지 1씩 증가된 값담고 그 이후로느 감소
+	    		  */
 	    	 }else {
 				 int[] arr = new int[num]; 
 
+				 //int value =1;
 	    		 for(int i=0; i<((arr.length)/2)+1; i++){
 	    			 arr[i] = i + 1;
 	    			 System.out.print(arr[i] + " "); 
 	    			 
 	    		 }
+	    		 /*
+	    		  for(int i=0; i<arr.length; i++){
+	    			 arr[i] = value;
+	    		  		
+	    		  		if((i < arr.length)/2){
+	    		  			value++;
+	    		  		}else {
+	    		  		    value--;
+	    		  		}
+	    		  }
+	    		  		
+	    		  for(int i=0; i<arr.length; i++){
+	    		  	if((i < arr.length)-1){
+	    			 System.out.print(arr[i] + " "); 
+	    		  		}else {
+	    			 		System.out.print(arr[i] + " "); 
+	    		  		}
+	    		  }
+		
+	    		  */
 			 
 	    		 for(int j=((arr.length)/2); j>0; j--){
 	    			 arr[j] = j;
