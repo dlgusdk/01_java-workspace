@@ -5,6 +5,22 @@ public class Product {
 	private int price;
 	private String brand;
 	
+	//기본생성자(매개변수 없는 생성자)
+	public Product(){
+		//객체 생성만
+	}
+
+	//매개변수 3개짜리 생성자(객체 생성과 동시에 각 필드에 값 초기화)
+	public Product(String pName, int price, String brand) {
+		this.pName = pName;
+		this.price = price;
+		this.brand = brand;
+	}
+	
+
+	
+	
+	
 	
 	//setter
 	public void setpName(String pName) { //set이나 get 다음에 pName처럼 낙타표기법을 어떻게 해야할지 모르는게 올 때 -> setPName아니고 그냥 pName이라고 적기.

@@ -29,8 +29,9 @@ public class CalssRun {
 		
 		System.out.println(a.information());*/
 		
-		Product b = new Product();
 		
+		//1.기본생성자로 생성한 후 setter이용해서 값 초기화
+		Product b = new Product();
 		b.setpName("갤럭시");
 		b.setPrice(120000);
 		b.setBrand("삼성");
@@ -41,5 +42,15 @@ public class CalssRun {
 		
 		System.out.println("=========");
 		System.out.println(b.information());
+		
+		System.out.println("=========");
+		//2.매개변수 생성자를 이용해서 생성과 동시에 각 필드에 초기화까지 진행이 되도록 
+		Product p2 = new Product("아이폰", 1500000, "애플"); 
+		//product의 매개변수 생성자 호출 (스트링, 인트, 스트링)
+		System.out.println(p2.information());
+		
+		//가격이 낮아졌을 경우 매개변수가 아닌 set을 사용해야 편리.
+		p2.setPrice(13000000);
+		System.out.println(p2.information());
 	}
 }
