@@ -1,5 +1,6 @@
 package com.br.chap05_constructor.model.run;
 
+import com.br.chap05_constructor.Cosmetic;
 import com.br.chap05_constructor.model.vo.User;
 
 public class ConstructorRun {
@@ -37,6 +38,32 @@ public class ConstructorRun {
 		System.out.println(u1.getAge());
 		System.out.println(u1.getUserName());
 		System.out.println(u1.getGender());
+		
+		System.out.println("==========================");
+		
+		//기본생성자로 생성한 후에 setter메소드를 이용해서 담기
+		Cosmetic c1 = new Cosmetic();
+		c1.setcName("아이라인");
+		c1.setPrice(15000);
+		c1.setBrand("클리오");
+		c1.setCategory("아이");
+		
+		/*String[] strArr = new String[2];
+		strArr[0] = "색소";
+		strArr[1] = "알코올";
+		
+		c1.setIngreaient(strArr);
+		*/
+		
+		String[] ingreArr = {"색소", "알코올"};
+		c1.setIngreaient(new String[] {"색소", "알코올"});
+		
+		System.out.println(c1.information());
+		
+		//매개변수생성자를 이용해 생성과 동시에 초기화
+		Cosmetic c2 = new Cosmetic("팩트", 20000, "아이오페", "페이스", new String[] {"알코올", "정제수", "색소"}, new User("admin","1234","관리자"));
+		System.out.println("\n" + c2.information());
+		
 	}
 
 }
