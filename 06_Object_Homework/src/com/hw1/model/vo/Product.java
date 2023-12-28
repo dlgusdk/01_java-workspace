@@ -73,7 +73,7 @@ public class Product {
 	
 	//information
 	public String information() {
-		return productId + productName + productArea + (price + " ") + tax;
+		return productId + ", " + productName + ", " + productArea + ", " + price + ", " + tax;
 	}
 	
 	

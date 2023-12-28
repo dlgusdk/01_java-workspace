@@ -50,7 +50,7 @@ public class Funtion {
 			
 		}else {
 		
-			for(int i=index1; i<=index2; i++) { //index1 ~ index2범위만큼 설정
+			for(int i=index1; i<index2; i++) { //index1 ~ index2범위만큼 설정
 				str1 += str.charAt(i);			//i=index1이니까 str(index1)부터 
 			}
 	
