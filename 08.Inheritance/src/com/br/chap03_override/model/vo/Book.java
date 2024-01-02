@@ -1,6 +1,6 @@
 package com.br.chap03_override.model.vo;
 
-public class Book {
+public class Book /*Extends Object(최상위 메소드이므로 부모인 Book은 오브젝트를 상속*/ {
 	private String title;
 	private String author;
 	private int price;
@@ -79,6 +79,7 @@ public class Book {
 		//   bk1			bk3
 		//this(현객체) vs  a(전달받은 비교할 대상객체)
 		Book other = (Book) a;
+		
 		if(title.equals(other.title) && author.equals(other.author) && price == other.price) {
 			return true;
 		}else {
