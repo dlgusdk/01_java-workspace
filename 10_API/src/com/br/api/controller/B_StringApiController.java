@@ -1,5 +1,7 @@
 package com.br.api.controller;
 
+import java.util.StringTokenizer;
+
 public class B_StringApiController {
 /*
  * 자바에서의 문자열을 관리하는 클래스로 총 세가지 있음
@@ -147,7 +149,113 @@ public class B_StringApiController {
 				 System.out.println("str1에 Hello가 포함되어있습니까 : " + str1.contains("Hello"));
 				 System.out.println("str1에 Bye가 포함되어있습니까 : " + str1.contains("Bye"));
 			
-		}
+				 //4.문자열.equalsIgnoreCase(String str) : boolean
+				 //문자열의 전달된 문자열이 일치하는지 대소문자 가리지않고 비교하겠다. 
+				 System.out.println("str1이 hello world 입니까 : " + str1.equalsIgnoreCase("hello world"));
+	
+				 //5.문자열.substring(int beginIndex) :String -> 문자열의 beginIndex 위치부터 끝까지의 문자열을 추출해서 반환
+				 //  문자열.substring(int beginIndex, int endIndex) :String ->문자열의 beginIndex 위치에서 endIndex 전까지의 문자열을 추출해서 반환
+				 System.out.println(str1.substring(6));
+				 System.out.println(str1.substring(0, 4)); //0부터 4번 인덱스 이전까지 출력
+			 
+				 //6. 문자열.replace(char oldChar, charChar) :String
+				 // 문자열 olderChar문자들을 newChar로 변환한 새 문자열 리턴
+				 System.out.println(str1.replace("l", "c"));
+				 System.out.println(str1);
+				 
+				 //7.문자열.toUpperCase() : String -> 다 대문자로 변경한 새 문자열 리턴
+				 //문자열.toLowerCase() : String -> 다 소문자로 변경한 새 문자열 리턴
+				 String str4 = str1.toUpperCase();
+				 System.out.println("str4 : " + str4);
+				 System.out.println("str4 다 소문자로 : " + str4.toLowerCase());
+				 
+				 //8.문자열.trim() : String
+				 // 문자열의 앞 뒤 공백을 제거시킨 새 문자열 리턴
+				 String str5 = "   Ja va  ";
+				 System.out.println("str5 :" + str5.trim());
+				 System.out.println("replace : " + str5.replace(" ", "")); //공백을 지정해서 제거 
+				 
+				 //9.문자열.toCharArray() :char[]
+			     char[] arr = str1.toCharArray();
+				 System.out.println("배열의 길이 : " + arr.length);
+				 System.out.println("0번 인덱스 : " + arr[0]);
+
+				 //10. static valueOf(char[] data) : String
+				 System.out.println(String.valueOf(arr));
+				 
+				 //11.문자열.indexOf(String str) : int
+				 //문자열.lastIndexOf(String str) : int
+				 System.out.println("str1에 앞에서부터의 첫 l의 위치 : " + str1.indexOf("l"));
+				 System.out.println("Str1에 뒤에서부터의 첫 l의 위치 : " + str1.lastIndexOf("l"));
+				 System.out.println("Str1에 앞에서부터의 첫 a의 위치 : " + str1.indexOf("a")); //존재하지 않을 경우 -1반환, 인덱스에 음수는 없으므로 ㅇ.
+			 
+				 //12.문자열.isBlank() : boolean
+				 // 문자열.isEmpty() : boolean
+				 // ->해당 문자열이 빈값인지를 확인해주는 메소드
+				 System.out.println("ABC".isBlank());
+				 System.out.println("".isBlank());
+				 System.out.println(" ".isBlank());
+				 //- isBlank() :빈문자열이든 공백문자열이든 다 빈값으로 
+				 System.out.println("ABC".isEmpty());
+				 System.out.println("".isEmpty());
+				 System.out.println(" ".isEmpty());		
+				 //isEmpty : 빈문자열은 빈값으로 인식을 하되, 공백은 실제 값으로 인식 	
+			
+			 }
+			 
+			 public void stringTokenizerTest() {
+				 //구분자를 기준으로 해서 문자열들을 분리시키는 방법
+				  String str = "JAVA,ORACLE,JDBC,HTML,CSS";
+				  
+				  //방법1. 분리된 문자열들을 String[]배열에 차곡차곡 담아두고자함
+				  //String 클래스에 제공하는 spilt메소드 이용
+				  //문자열.spilt(구분자) : String[]
+				  String[] arr = str.split(",");
+				  System.out.println("분리된 문자열의 갯수 : " + arr.length);
+				  
+				//  for(int i=0; i<arr.length; i++) {
+				  for(String s : arr) {  
+					  //System.out.println(arr[i]);
+					  System.out.println(s);
+				  }
+				  
+				  //방법2. 분리된 문자열들을 토큰으로 관리하는 방법
+				  //java.util.StringTokenizer 클래스를 이용하는 방법
+				  //StringTokenizer stn = new StringTokenizer(분리시키고자하는문자열, 구분자);
+				  StringTokenizer stn = new StringTokenizer(str, ",");
+				  System.out.println("토큰의 갯수(==분리된문자열갯수) : " + stn.countTokens());
+			
+				 /* System.out.println(stn.nextToken());
+				  System.out.println(stn.nextToken());
+				  System.out.println(stn.nextToken());
+				  System.out.println(stn.nextToken());
+				  System.out.println(stn.nextToken());
+				  System.out.println("현재의 토큰 갯수 : " + stn.countTokens()); //더 이상 뽑을게 없으므로 0이 출력
+				  System.out.println(stn.nextToken());*/
+				  
+				  for(int i=stn.countTokens(); i>0; i--) {
+					  System.out.println(stn.nextToken());
+				  
+				  }
+				  /*i=0 i<5 java
+				   * i=1 i<4 Oracle
+				   * i=2 i<3 JDBC
+				   */
+				  
+				  //해결방법 1
+				  int count = stn.countTokens(); //count = 5
+			
+				  for(int i=0; i<count; i++) {
+					  System.out.println(stn.nextToken());
+				  
+				  }
+				  
+				  //해결방법2
+				  while(stn.hasMoreTokens()) {
+					  System.out.println(stn.nextToken());
+
+				  }
+			 }
 	}
 	
 
