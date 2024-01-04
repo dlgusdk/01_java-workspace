@@ -185,14 +185,16 @@ public class D_DateApiController {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 E hh:mm:ss"); //대문자 H로 쓰면 24시간 기준으로 볼 수 있음
 		String dateStr = sdf.format(new Date()); 
 		System.out.println(dateStr);
+	
 		
 		//2.java.util.Calender반영
 		sdf = new SimpleDateFormat("yyyy/MM/dd/ HH:mm");
 		
 		//>Calendar 객체는 바로 전달하면 안됨
 		//String calStr = sdf.format(Calendar.getInstance()); 
-		String calStr = sdf.format(Calendar.getInstance().getTimeInMillis());
+		//String calStr = sdf.format(Calendar.getInstance().getTimeInMillis());
+		Calendar calendar = new GregorianCalendar(); 
+		String calStr = sdf.format(calendar.getTimeInMillis());
 		System.out.println(calStr);
-		
 	}
 }
