@@ -72,15 +72,22 @@ public class Book {
 	@Override
 	public String toString() {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
-		Calendar calendar = new GregorianCalendar(); 
-		String publishDate = sdf.format(calendar.getTimeInMillis());
-		//Calendar publishDate형식이라 했으므로 date가 아닌 자료형 Calendar로 변경해줄 수 있는 그레고리 사용하기!
+		//String 변수 = sdf.format(날짜정보를 가지고있는 객체 java.util.Date객체만 가능)
+		//String 변수 = sdf.format(날짜를 밀리세컨초로 표현한 것)
+		
+		//방법 1
+		//Calendar calendar = new GregorianCalendar(); 
+		//String publishDate = sdf.format(calendar.getTimeInMillis());
+		
+		//방법 2
+		String formatPublishDate = sdf.format(publishDate.getTimeInMillis());
+
 		// 출판일(Calendar publishDate) 형식을  "0000년 00월 00일" 형태의 문자열 형식으로 만들어 하단의 주석에 반영시키시오
 		
 		// 코드 작성
 		
 		return "Book [title=" + title + ", author=" + author + ", publisher=" + publisher + ", publishDate="
-				+ publishDate + ", price=" + price + "]";
+				+ formatPublishDate/*publishDate*/ + ", price=" + price + "]";
 	}
 
 }
