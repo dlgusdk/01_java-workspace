@@ -119,10 +119,10 @@ public class BookController {
         Calendar publishDate = book.getPublishDate(); 
        
 		if(list[4] != null) { //확인필요. 3에서 입력받고 인덱스 4(5번)이 나오므로 null이면 실행 x
-	        SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
+	        SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 출간");
 	        String sdfStr = sdf.format(publishDate.getTimeInMillis());
 	        //PublishDate는 GregorianCalendar로 Calendar자료형으로 만들어버림. 변환해야함.date로 쓸거면
-	    	System.out.println(sdfStr + " 출간");
+	    	System.out.println(sdfStr);
 */
 		
 		//방법2.
