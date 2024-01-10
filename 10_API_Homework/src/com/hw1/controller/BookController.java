@@ -10,6 +10,7 @@ import com.hw1.model.vo.Book;
 
 public class BookController {
 	
+	
 	private Book[] list = new Book[5];
 	{ 	// 초기화블럭
 		list[0] = new Book("자바의 정석", "제임스 고슬링", "나무", new GregorianCalendar(2018, 4-1, 15), 20000);

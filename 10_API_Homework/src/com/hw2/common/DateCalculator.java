@@ -9,6 +9,7 @@ public interface DateCalculator {
 	 *    단, "2024-01-04 17:30:05"  과 같은 형식으로 출력될 수 있도록 하시오. 
 	 *    (toString, replace, substring, indexOf 메소드 모두 사용하여 푸시오)
 	 */
+	
 	void printNowDateTime();
 	
 	
