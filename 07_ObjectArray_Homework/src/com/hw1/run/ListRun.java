@@ -44,9 +44,11 @@ public class ListRun {
 		//em[0].setPhone("01055559999");
 		//em[0].setAddress("전라도 광주");
 		
-		emp.get(0).setEmpName("김말똥");
-		emp.get(0).setDept("영업부");
-		emp.get(0).setAge(30);
+		//emp.add(new Employee());로 재생성해서 한꺼번에 적을수도 잇음
+		emp.set(0, new Employee(1, "김말똥", "영업부", "강사",  20 ,'F', 1000000, 0.01, "01011112222", "서울 마곡"));
+		//emp.get(0).setEmpName("김말똥");
+		//emp.get(0).setDept("영업부");
+		//emp.get(0).setAge(30);
 		
 		//System.out.println(em[0].information());
 	

@@ -18,7 +18,7 @@ public class Cosmetic {
      *  - static : 공유의 개념
      *  - final : 상수의 개념
      *  - static fianl : 상수필드
-
+		public static void i //형태는(예약어)는 static이면서 반환, 자료형은 void인 클래스 i
 
 	 * 접근제한자
 	 * public > protected > default > private

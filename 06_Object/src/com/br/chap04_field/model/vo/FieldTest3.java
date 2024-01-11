@@ -15,5 +15,6 @@ public class FieldTest3 {
 	public static final String STA_FIN = "static_final";
 
 
-
+ //"static_final"
+	//public static final String STA_FIN = "static_final"; // 형태가 static 이면서 final 상수로 반환하는 
 }
